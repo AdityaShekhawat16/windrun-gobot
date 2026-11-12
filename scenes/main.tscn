@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_game"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fallback"]
+size = Vector2(300, 300)
+
+[sub_resource type="StandardMaterial3D" id="Material_fallback"]
+shading_mode = 0
+albedo_color = Color(0.44, 0.8, 0.18, 1)
+
+[node name="WINDRUN" type="Node3D"]
+script = ExtResource("1_game")
+
+[node name="Startup_fallback" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="Startup_fallback"]
+mesh = SubResource("PlaneMesh_fallback")
+material_override = SubResource("Material_fallback")
+
+[node name="Camera3D" type="Camera3D" parent="Startup_fallback"]
+position = Vector3(0, 9, 26)
+rotation_degrees = Vector3(-18, 0, 0)
+current = true
+
+[node name="Fallback_UI" type="CanvasLayer" parent="Startup_fallback"]
+
+[node name="Status" type="Label" parent="Startup_fallback/Fallback_UI"]
+offset_left = 40.0
+offset_top = 35.0
+offset_right = 1040.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.09, 0.23, 0.15, 1)
+theme_override_font_sizes/font_size = 25
+text = "WINDRUN — starting...\nIf this message stays visible, open Godot's Debugger > Errors.\nCopy the first red error message so we can fix it."

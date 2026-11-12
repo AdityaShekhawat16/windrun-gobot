@@ -1,0 +1,20 @@
+# Godot-generated artifacts (recreated on project import)
+.godot/
+.import/
+*.tmp
+*.log
+
+# OS / editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Blender autosave/backup files
+*.blend1
+*.blend2
+*.blend3
+
+# Godot exported executables (do not commit builds)
+exports/
+builds/

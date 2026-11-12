@@ -1,0 +1,10 @@
+*.gd text eol=lf
+*.tscn text eol=lf
+*.gdshader text eol=lf
+*.md text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.wav binary
+*.glb binary
+*.blend binary
